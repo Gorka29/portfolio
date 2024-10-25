@@ -1,0 +1,12 @@
+// Asumiendo que tienes un contenedor principal (por ejemplo, el body o un div que envuelve todo)
+body, .contenedor-principal {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.contenido {
+  background-color: #0F172B;
+  flex-grow: 1;
+}
+
