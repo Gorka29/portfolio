@@ -1,21 +1,21 @@
-<header class="bg-blue-500 p-4">
+<header class="bg-dark p-4">
   <nav class="container mx-auto flex justify-between items-center">
-    <h1 class="text-white text-2xl font-bold select-none">Gorka Ruiz</h1>
+    <h1 class="main-color text-2xl font-bold select-none">Gorka Ruiz</h1>
 
     <!-- Menú para pantallas grandes -->
     <ul class="hidden md:flex space-x-4">
-      <li><a href="#" class="text-white hover:text-gray-200">Inicio</a></li>
-      <li><a href="#" class="text-white hover:text-gray-200">Sobre mí</a></li>
-      <li><a href="#" class="text-white hover:text-gray-200">Proyectos</a></li>
-      <li><a href="#" class="text-white hover:text-gray-200">Contacto</a></li>
+      <li><a href="#" class="inicio uppercase main-color">Inicio</a></li>
+      <li><a href="#" class="sobre-mi uppercase main-color">Sobre mí</a></li>
+      <li><a href="#" class="proyectos uppercase main-color">Proyectos</a></li>
+      <li><a href="#" class="contacto uppercase main-color">Contacto</a></li>
     </ul>
 
     <!-- Botón de hamburguesa para móviles -->
-    <button class="md:hidden text-white relative w-6 h-6 flex items-center justify-center mr-2" (click)="toggleMenu()">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 absolute transition-all duration-300 ease-in-out" [ngClass]="{'opacity-0 rotate-90': menuAbierto, 'opacity-100 rotate-0': !menuAbierto}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <button class="md:hidden relative w-6 h-6 flex items-center justify-center mr-2" (click)="toggleMenu()">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 absolute transition-all duration-300 ease-in-out main-color" [ngClass]="{'opacity-0 rotate-90': menuAbierto, 'opacity-100 rotate-0': !menuAbierto}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 absolute transition-all duration-300 ease-in-out" [ngClass]="{'opacity-100 rotate-0': menuAbierto, 'opacity-0 -rotate-90': !menuAbierto}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 absolute transition-all duration-300 ease-in-out main-color" [ngClass]="{'opacity-100 rotate-0': menuAbierto, 'opacity-0 -rotate-90': !menuAbierto}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
       </svg>
     </button>
@@ -24,10 +24,10 @@
   <!-- Menú móvil -->
   <div class="md:hidden" [ngClass]="{'hidden': !menuAbierto}">
     <ul class="mt-2 p-2 space-y-2">
-      <li><a href="#" class="block text-white hover:text-gray-200 py-1">Inicio</a></li>
-      <li><a href="#" class="block text-white hover:text-gray-200 py-1">Proyectos</a></li>
-      <li><a href="#" class="block text-white hover:text-gray-200 py-1">Sobre mí</a></li>
-      <li><a href="#" class="block text-white hover:text-gray-200 py-1">Contacto</a></li>
+      <li><a href="#" class="block main-color inicio uppercase py-1 font-roboto text-base">Inicio</a></li>
+      <li><a href="#" class="block main-color sobre-mi uppercase py-1 font-roboto text-base">Proyectos</a></li>
+      <li><a href="#" class="block main-color proyectos uppercase py-1 font-roboto text-base">Sobre mí</a></li>
+      <li><a href="#" class="block main-color contacto uppercase py-1 font-roboto text-base">Contacto</a></li>
     </ul>
   </div>
 </header>

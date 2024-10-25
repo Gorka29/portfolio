@@ -1,0 +1,6 @@
+$main-color: #0F172B;
+$main-color-hover: #182545;
+
+.inicio:hover, .sobre-mi:hover, .proyectos:hover, .contacto:hover {
+  color: $main-color-hover;
+}
