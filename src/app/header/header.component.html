@@ -3,11 +3,11 @@
     <h1 class="main-color text-2xl font-bold select-none">Gorka Ruiz</h1>
 
     <!-- Menú para pantallas grandes -->
-    <ul class="hidden md:flex space-x-4">
-      <li><a href="#" class="inicio uppercase main-color">Inicio</a></li>
-      <li><a href="#" class="sobre-mi uppercase main-color">Sobre mí</a></li>
-      <li><a href="#" class="proyectos uppercase main-color">Proyectos</a></li>
-      <li><a href="#" class="contacto uppercase main-color">Contacto</a></li>
+    <ul class="hidden md:flex md:flex-row md:space-x-4">
+      <li><a [routerLink]="['/']" fragment="inicio" class="inicio uppercase texto-principal hover:texto-principal-hover">Inicio</a></li>
+      <li><a [routerLink]="['/']" fragment="sobre-mi" class="sobre-mi uppercase texto-principal hover:texto-principal-hover">Sobre mí</a></li>
+      <li><a [routerLink]="['/']" fragment="proyectos" class="proyectos uppercase texto-principal hover:texto-principal-hover">Proyectos</a></li>
+      <li><a [routerLink]="['/']" fragment="contacto" class="contacto uppercase texto-principal hover:texto-principal-hover">Contacto</a></li>
     </ul>
 
     <!-- Botón de hamburguesa para móviles -->
@@ -24,10 +24,10 @@
   <!-- Menú móvil -->
   <div class="md:hidden" [ngClass]="{'hidden': !menuAbierto}">
     <ul class="mt-2 p-2 space-y-2">
-      <li><a href="#" class="block main-color inicio uppercase py-1 font-roboto text-base">Inicio</a></li>
-      <li><a href="#" class="block main-color sobre-mi uppercase py-1 font-roboto text-base">Proyectos</a></li>
-      <li><a href="#" class="block main-color proyectos uppercase py-1 font-roboto text-base">Sobre mí</a></li>
-      <li><a href="#" class="block main-color contacto uppercase py-1 font-roboto text-base">Contacto</a></li>
+      <li><a [routerLink]="['/']" fragment="inicio" class="block main-color inicio uppercase py-1 font-roboto text-base">Inicio</a></li>
+      <li><a [routerLink]="['/']" fragment="sobre-mi" class="block main-color proyectos uppercase py-1 font-roboto text-base">Sobre mí</a></li>
+      <li><a [routerLink]="['/']" fragment="proyectos" class="block main-color sobre-mi uppercase py-1 font-roboto text-base">Proyectos</a></li>
+      <li><a [routerLink]="['/']" fragment="contacto" class="block main-color contacto uppercase py-1 font-roboto text-base">Contacto</a></li>
     </ul>
   </div>
 </header>
