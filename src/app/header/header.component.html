@@ -11,7 +11,7 @@
     </ul>
 
     <!-- Botón de hamburguesa para móviles -->
-    <button class="md:hidden text-white relative w-6 h-6 flex items-center justify-center" (click)="toggleMenu()">
+    <button class="md:hidden text-white relative w-6 h-6 flex items-center justify-center mr-2" (click)="toggleMenu()">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 absolute transition-all duration-300 ease-in-out" [ngClass]="{'opacity-0 rotate-90': menuAbierto, 'opacity-100 rotate-0': !menuAbierto}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
