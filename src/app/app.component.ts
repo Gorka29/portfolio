@@ -37,14 +37,19 @@ export class AppComponent implements OnInit {
   scrollToSection(sectionId: string) {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Calculamos el offset basado en la altura del header
+      const header = document.querySelector('header');
+      const offset = header ? header.getBoundingClientRect().height : 0;
 
-      // Ajuste adicional después de un pequeño retraso para asegurar la posición
-      setTimeout(() => {
-        const yOffset = -70; // Ajuste en píxeles, cámbialo según sea necesario
-        const yPosition = element.getBoundingClientRect().top + window.scrollY + yOffset;
-        window.scrollTo({ top: yPosition, behavior: 'smooth' });
-      }, 300); // Retardo para asegurarse de que el smooth scroll inicial se complete
+      // Calculamos la posición final de una vez
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      // Realizamos el scroll suave en una sola operación
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     }
   }
 }
