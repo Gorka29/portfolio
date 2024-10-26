@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { RouterOutlet, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
@@ -15,6 +15,16 @@ export class HeaderComponent {
 
   toggleMenu() {
     this.menuAbierto = !this.menuAbierto;
+  }
+
+  cerrarMenu() {
+    this.menuAbierto = false;
+  }
+
+  @Output() sectionSelected = new EventEmitter<string>();
+
+  onSectionClick(sectionId: string) {
+    this.sectionSelected.emit(sectionId);
   }
 
 }

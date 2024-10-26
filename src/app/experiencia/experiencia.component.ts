@@ -2,14 +2,14 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-proyectos',
+  selector: 'app-experiencia',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './proyectos.component.html',
-  styleUrl: './proyectos.component.scss'
+  templateUrl: './experiencia.component.html',
+  styleUrl: './experiencia.component.scss'
 })
-export class ProyectosComponent {
-  proyectos = [
+export class ExperienciaComponent {
+  cv = [
     {
       fechaInicio: 'SEP 2023',
       fechaFin: 'JUN 2024',

@@ -1,13 +1,13 @@
-<header class="p-4 sticky top-0 z-50">
+<header class="p-4 sticky top-0 z-50 bg-white">
   <nav class="container mx-auto flex justify-between items-center">
     <h1 class="main-color ml-3 text-2xl font-bold select-none">Gorka Ruiz</h1>
 
     <!-- Menú para pantallas grandes -->
     <ul class="hidden md:flex md:flex-row md:space-x-4">
-      <li><a [routerLink]="['/']" fragment="inicio" class="inicio uppercase texto-principal hover:texto-principal-hover">Inicio</a></li>
-      <li><a [routerLink]="['/']" fragment="sobre-mi" class="sobre-mi uppercase texto-principal hover:texto-principal-hover">Sobre mí</a></li>
-      <li><a [routerLink]="['/']" fragment="proyectos" class="proyectos uppercase texto-principal hover:texto-principal-hover">Proyectos</a></li>
-      <li><a [routerLink]="['/']" fragment="contacto" class="contacto uppercase texto-principal hover:texto-principal-hover">Contacto</a></li>
+      <li><a class="inicio uppercase texto-principal hover:texto-principal-hover" (click)="onSectionClick('inicio')">Inicio</a></li>
+      <li><a class="sobre-mi uppercase texto-principal hover:texto-principal-hover" (click)="onSectionClick('sobre-mi')">Sobre mí</a></li>
+      <li><a class="proyectos uppercase texto-principal hover:texto-principal-hover" (click)="onSectionClick('experiencia')">Experiencia</a></li>
+      <li><a class="contacto uppercase texto-principal hover:texto-principal-hover" (click)="onSectionClick('contacto')">Contacto</a></li>
     </ul>
 
     <!-- Botón de hamburguesa para móviles -->
@@ -23,11 +23,11 @@
 
   <!-- Menú móvil -->
   <div class="md:hidden" [ngClass]="{'hidden': !menuAbierto}">
-    <ul class="mt-2 p-2 space-y-2">
-      <li><a [routerLink]="['/']" fragment="inicio" class="block main-color inicio uppercase py-1 font-roboto text-base">Inicio</a></li>
-      <li><a [routerLink]="['/']" fragment="sobre-mi" class="block main-color proyectos uppercase py-1 font-roboto text-base">Sobre mí</a></li>
-      <li><a [routerLink]="['/']" fragment="proyectos" class="block main-color sobre-mi uppercase py-1 font-roboto text-base">Proyectos</a></li>
-      <li><a [routerLink]="['/']" fragment="contacto" class="block main-color contacto uppercase py-1 font-roboto text-base">Contacto</a></li>
+    <ul class="mt-2 p-2 space-y-2 pb-4">
+      <li><a class="block main-color inicio uppercase py-1 font-roboto text-base" (click)="cerrarMenu()" (click)="onSectionClick('inicio')">Inicio</a></li>
+      <li><a class="block main-color sobre-mi uppercase py-1 font-roboto text-base" (click)="cerrarMenu()" (click)="onSectionClick('sobre-mi')">Sobre mí</a></li>
+      <li><a class="block main-color proyectos uppercase py-1 font-roboto text-base" (click)="cerrarMenu()" (click)="onSectionClick('experiencia')">Experiencia</a></li>
+      <li><a class="block main-color contacto uppercase py-1 font-roboto text-base" (click)="cerrarMenu()" (click)="onSectionClick('contacto')">Contacto</a></li>
     </ul>
   </div>
 </header>

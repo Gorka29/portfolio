@@ -1,0 +1,15 @@
+<section id="experiencia" class="experiencia pt-[100px] -mt-[100px]">
+  <h2>EXPERIENCIA</h2>
+
+  <div class="proyecto" *ngFor="let experiencia of cv">
+    <div class="fecha">{{ experiencia.fechaInicio }} — {{ experiencia.fechaFin }}</div>
+    <div class="contenido">
+      <h3>{{ experiencia.titulo }}</h3>
+      <p class="subtitulo" *ngIf="experiencia.empresa">{{ experiencia.empresa }}</p>
+      <p class="descripcion">{{ experiencia.descripcion }}</p>
+      <div class="tecnologias mb-5">
+        <span class="tecnologia" *ngFor="let tech of experiencia.tecnologias">{{ tech }}</span>
+      </div>
+    </div>
+  </div>
+</section>
