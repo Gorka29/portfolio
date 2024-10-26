@@ -4,3 +4,7 @@ $main-color-hover: #182545;
 .inicio:hover, .sobre-mi:hover, .proyectos:hover, .contacto:hover {
   color: $main-color-hover;
 }
+
+header {
+  background-color: white;
+}
