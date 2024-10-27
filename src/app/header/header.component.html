@@ -4,10 +4,10 @@
 
     <!-- Menú para pantallas grandes -->
     <ul class="hidden md:flex md:flex-row md:space-x-4">
-      <li><a class="inicio uppercase texto-principal hover:texto-principal-hover" (click)="onSectionClick('inicio')">Inicio</a></li>
-      <li><a class="sobre-mi uppercase texto-principal hover:texto-principal-hover" (click)="onSectionClick('sobre-mi')">Sobre mí</a></li>
-      <li><a class="proyectos uppercase texto-principal hover:texto-principal-hover" (click)="onSectionClick('experiencia')">Experiencia</a></li>
-      <li><a class="contacto uppercase texto-principal hover:texto-principal-hover" (click)="onSectionClick('contacto')">Contacto</a></li>
+      <li><a class="inicio uppercase texto-principal hover:texto-principal-hover cursor-pointer" (click)="onSectionClick('inicio')">Inicio</a></li>
+      <li><a class="sobre-mi uppercase texto-principal hover:texto-principal-hover cursor-pointer" (click)="onSectionClick('sobre-mi')">Sobre mí</a></li>
+      <li><a class="proyectos uppercase texto-principal hover:texto-principal-hover cursor-pointer" (click)="onSectionClick('experiencia')">Experiencia</a></li>
+      <li><a class="contacto uppercase texto-principal hover:texto-principal-hover cursor-pointer" (click)="onSectionClick('contacto')">Contacto</a></li>
     </ul>
 
     <!-- Botón de hamburguesa para móviles -->
@@ -24,10 +24,10 @@
   <!-- Menú móvil -->
   <div class="md:hidden" [ngClass]="{'hidden': !menuAbierto}">
     <ul class="mt-2 p-2 space-y-2 pb-4">
-      <li><a class="block main-color inicio uppercase py-1 font-roboto text-base" (click)="cerrarMenu()" (click)="onSectionClick('inicio')">Inicio</a></li>
-      <li><a class="block main-color sobre-mi uppercase py-1 font-roboto text-base" (click)="cerrarMenu()" (click)="onSectionClick('sobre-mi')">Sobre mí</a></li>
-      <li><a class="block main-color proyectos uppercase py-1 font-roboto text-base" (click)="cerrarMenu()" (click)="onSectionClick('experiencia')">Experiencia</a></li>
-      <li><a class="block main-color contacto uppercase py-1 font-roboto text-base" (click)="cerrarMenu()" (click)="onSectionClick('contacto')">Contacto</a></li>
+      <li><a class="block main-color inicio uppercase py-1 font-roboto text-base cursor-pointer" (click)="onSectionClick('inicio')">Inicio</a></li>
+      <li><a class="block main-color sobre-mi uppercase py-1 font-roboto text-base cursor-pointer" (click)="onSectionClick('sobre-mi')">Sobre mí</a></li>
+      <li><a class="block main-color proyectos uppercase py-1 font-roboto text-base cursor-pointer" (click)="onSectionClick('experiencia')">Experiencia</a></li>
+      <li><a class="block main-color contacto uppercase py-1 font-roboto text-base cursor-pointer" (click)="onSectionClick('contacto')">Contacto</a></li>
     </ul>
   </div>
 </header>
