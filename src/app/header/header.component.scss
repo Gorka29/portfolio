@@ -1,4 +1,5 @@
 $main-color: #0F172B;
+$main-color-oscuro: #0c1324;
 $main-color-hover: #182545;
 
 .inicio:hover, .sobre-mi:hover, .proyectos:hover, .contacto:hover {
@@ -9,15 +10,6 @@ header {
   background-color: white;
 }
 
-.seccion-actual-mobile {
-  color: $main-color;
-  padding: 10px;
-  text-align: center;
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .seccion-actual-mobile {
-    display: block;
-  }
+.seccion-actual {
+  background-color: $main-color-oscuro;
 }
