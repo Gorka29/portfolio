@@ -28,6 +28,7 @@ export class HeaderComponent implements OnInit {
 
   onSectionClick(sectionId: string) {
     this.sectionSelected.emit(sectionId);
+    this.cerrarMenu();
   }
 
   seccionActual: string = 'Inicio';
