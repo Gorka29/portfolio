@@ -29,6 +29,16 @@ export class HeaderComponent implements OnInit {
   onSectionClick(sectionId: string) {
     this.sectionSelected.emit(sectionId);
     this.cerrarMenu();
+
+    // Añadir un pequeño retraso antes de hacer scroll
+    setTimeout(() => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const headerHeight = document.querySelector('app-header')?.clientHeight || 0;
+        const y = element.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+        window.scrollTo({top: y, behavior: 'smooth'});
+      }
+    }, 100);
   }
 
   seccionActual: string = 'Inicio';
