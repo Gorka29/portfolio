@@ -8,3 +8,16 @@ $main-color-hover: #182545;
 header {
   background-color: white;
 }
+
+.seccion-actual-mobile {
+  color: $main-color;
+  padding: 10px;
+  text-align: center;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .seccion-actual-mobile {
+    display: block;
+  }
+}
