@@ -4,13 +4,13 @@ body, .contenedor-principal {
   flex-direction: column;
   min-height: 100vh;
   color: white;
+  background-color: #0F172B;
 }
 
 .contenido {
   position: relative;
-  background-color: #0F172B;
+
   flex-grow: 1;
-  padding: 40px;
 
   h2 {
     color: #ccd6f6;
@@ -31,18 +31,11 @@ body, .contenedor-principal {
     font-size:30px;
     background-color: #0F172B;
   }
-
-  .one{
-    z-index: 3;
-  }
-
-  .two{
-    z-index: 2;
-  }
-
-  .three{
-    z-index: 1;
-  }
-
 }
 
+// Media query para dispositivos móviles
+@media (max-width: 768px) {
+  .contenido {
+    padding: 40px;
+  }
+}
