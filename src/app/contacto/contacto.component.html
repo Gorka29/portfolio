@@ -1,6 +1,15 @@
-<div id="contacto-box" class="mb-14">
+<div id="contacto-box">
 
-  <form (ngSubmit)="manejarEnvio()" class="space-y-4 max-w-md mx-auto border-2 border-[#64ffda] rounded-lg shadow-md p-6">
+  <div class="text-center mb-8">
+    <p class="text-lg text-gray-300 mb-4">
+      ¿Tienes alguna pregunta o te gustaría colaborar en algún proyecto? ¡Me encantaría escucharte!
+    </p>
+    <p class="text-gray-400">
+      No dudes en contactarme a través del siguiente formulario. Estaré encantado de responder a tus consultas y explorar posibles oportunidades de trabajo conjunto.
+    </p>
+  </div>
+
+  <form (ngSubmit)="manejarEnvio()" class="space-y-4 max-w-md  mx-auto border-2 border-[#64ffda] rounded-lg shadow-md p-6">
     <div>
       <input
         type="text"
