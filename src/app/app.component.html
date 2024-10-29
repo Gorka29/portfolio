@@ -1,14 +1,20 @@
 <app-header (sectionSelected)="scrollToSection($event)"></app-header>
 
 <div class="contenedor-principal md:px-40">
-  <div class="contenido">
-    <app-inicio id="inicio"></app-inicio>
-    <h2 class="sticky-menu uno">SOBRE MÍ</h2>
-    <app-sobre-mi id="sobre-mi"></app-sobre-mi>
-    <h2 class="sticky-menu dos">EXPERIENCIA</h2>
-    <app-experiencia id="experiencia"></app-experiencia>
-    <h2 class="sticky-menu tres">CONTACTO</h2>
-    <app-contacto id="contacto"></app-contacto>
+  <div id="inicio" class="contenido">
+    <app-inicio></app-inicio>
+    <div id="sobre-mi">
+        <h2 class="sticky-menu uno">SOBRE MÍ</h2>
+        <app-sobre-mi></app-sobre-mi>
+    </div>
+    <div id="experiencia">
+        <h2 class="sticky-menu dos">EXPERIENCIA</h2>
+        <app-experiencia></app-experiencia>
+    </div>
+    <div id="contacto">
+        <h2 class="sticky-menu tres">CONTACTO</h2>
+        <app-contacto></app-contacto>
+    </div>
   </div>
 </div>
 
