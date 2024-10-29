@@ -7,6 +7,42 @@ body, .contenedor-principal {
 }
 
 .contenido {
+  position: relative;
   background-color: #0F172B;
   flex-grow: 1;
+  padding: 40px;
+
+  h2 {
+    color: #ccd6f6;
+    margin-bottom: 40px;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 2px solid #64ffda;
+    padding-bottom: 10px;
+  }
+
+  .sticky-menu{
+    position: sticky;
+    width: 100%;
+    margin-top: 50px;
+    top: 64px;
+    color: white;
+    font-size:30px;
+    background-color: #0F172B;
+  }
+
+  .one{
+    z-index: 3;
+  }
+
+  .two{
+    z-index: 2;
+  }
+
+  .three{
+    z-index: 1;
+  }
+
 }
+
