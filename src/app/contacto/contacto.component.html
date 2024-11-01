@@ -9,7 +9,7 @@
     </p>
   </div>
 
-  <form (ngSubmit)="manejarEnvio()" class="space-y-4 max-w-md  mx-auto border-2 border-[#64ffda] rounded-lg shadow-md p-6">
+  <!-- <form (ngSubmit)="manejarEnvio()" class="space-y-4 max-w-md  mx-auto border-2 border-[#64ffda] rounded-lg shadow-md p-6">
     <div>
       <input
         type="text"
@@ -43,5 +43,41 @@
     >
       Enviar mensaje
     </button>
+  </form> -->
+
+  <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/meoqazzj" method="post" class="space-y-4 max-w-md mx-auto mb-10 border-2 border-[#64ffda] rounded-lg shadow-md p-6">
+    <div>
+      <input
+        type="text"
+        name="name"
+        id="full-name"
+        placeholder="Nombre"
+        required=""
+        class="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#64ffda]"
+      />
+    </div>
+    <div>
+      <input
+        type="email"
+        name="_replyto"
+        id="email-address"
+        placeholder="Correo electrónico"
+        required=""
+        class="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#64ffda]"
+      />
+    </div>
+    <div>
+      <textarea
+        name="message"
+        id="message"
+        rows="4"
+        placeholder="Tu mensaje"
+        required=""
+        class="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#64ffda]"
+      ></textarea>
+      <input type="hidden" name="_subject" id="email-subject" value="Oferta de trabajo">
+      <button type="submit" class="w-full bg-[#64ffda] text-gray-800 py-2 px-4 rounded-lg hover:bg-[#4cd9b6] transition-colors mt-4">Enviar</button>
+      <p id="form-response" class="mt-4 text-center text-sm text-gray-400"></p>
+    </div>
   </form>
 </div>
