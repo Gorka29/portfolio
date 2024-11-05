@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 @Component({
   selector: 'app-experiencia',
@@ -8,7 +10,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './experiencia.component.html',
   styleUrl: './experiencia.component.scss'
 })
-export class ExperienciaComponent {
+export class ExperienciaComponent implements OnInit, AfterViewInit {
   cv = [
     {
       fechaInicio: 'SEP 2023',
@@ -52,4 +54,52 @@ export class ExperienciaComponent {
     }
   ];
 
+
+  ngOnInit(): void {
+    gsap.registerPlugin(ScrollTrigger);
+  }
+
+  ngAfterViewInit() {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Aseguramos que el header permanezca por encima
+    gsap.set('header', {
+      zIndex: 50,
+      clearProps: 'opacity,transform'
+    });
+
+    const experiencias = document.querySelectorAll('.proyecto');
+    experiencias.forEach((experiencia) => {
+      gsap.from(experiencia, {
+        opacity: 0,
+        y: 50,
+        duration: 0.5,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: experiencia,
+          start: "top 80%",
+          end: "top 60%",
+          toggleActions: "play none none reverse",
+          markers: false
+        }
+      });
+    });
+
+    const tecnologias = document.querySelectorAll('.tecnologia');
+    tecnologias.forEach((tecnologia) => {
+      gsap.from(tecnologia, {
+        opacity: 0,
+        y: -50,
+        duration: 0.5,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: tecnologia,
+          start: "top 85%",
+          end: "top 60%",
+          toggleActions: "play none none reverse",
+          markers: false
+        }
+      });
+    });
+  }
 }
