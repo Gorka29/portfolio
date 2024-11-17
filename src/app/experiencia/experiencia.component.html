@@ -6,7 +6,11 @@
       <p class="subtitulo mt-3" *ngIf="experiencia.empresa">{{ experiencia.empresa }}</p>
       <p class="descripcion">{{ experiencia.descripcion }}</p>
       <div class="tecnologias mb-5">
-        <span class="tecnologia" *ngFor="let tech of experiencia.tecnologias">{{ tech }}</span>
+        <span *ngFor="let tecnologia of experiencia.tecnologias; let i = index"
+              class="tecnologia"
+              [attr.data-index]="i">
+          {{ tecnologia }}
+        </span>
       </div>
     </div>
   </div>

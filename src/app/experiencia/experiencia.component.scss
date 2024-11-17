@@ -1,6 +1,7 @@
 .experiencia-box {
   color: #8892b0;
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
+  z-index: -1;
 
   h2 {
     color: #ccd6f6;
@@ -13,9 +14,12 @@
   }
 
   .proyecto {
+    position: relative;
     display: flex;
     margin-bottom: 40px;
     flex-direction: row; // Mantiene la dirección en fila para escritorio
+    // background-color: #0a192f;
+    // z-index: -1;
 
     .fecha {
       flex: 0 0 150px; // Ancho fijo para la fecha en escritorio
@@ -132,3 +136,4 @@
     }
   }
 }
+
