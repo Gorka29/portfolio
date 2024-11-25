@@ -46,7 +46,10 @@ export class SobreMiComponent implements AfterViewInit {
         duration: 3,
         strokeDashoffset: -pathLength,
         ease: "power4.inOut"
-      }, ">");
+      }, ">")
+      .set(hexPath, {
+        strokeDashoffset: pathLength
+      });
 
       const symbolsPaths = [izquierdaPath, centroPath, derechaPath];
 
