@@ -21,66 +21,55 @@ export class SobreMiComponent implements AfterViewInit {
 
     if (hexPath) {
       const pathLength = hexPath.getTotalLength();
-
-      const tl = gsap.timeline({
-        repeat: -1,
-        onRepeat: () => {
-          gsap.set(hexPath, {
-            strokeDasharray: pathLength,
-            strokeDashoffset: pathLength
-          });
-        }
-      });
+      const hexTl = gsap.timeline({ repeat: -1 });
 
       gsap.set(hexPath, {
         strokeDasharray: pathLength,
         strokeDashoffset: pathLength
       });
 
-      tl.to(hexPath, {
-        duration: 3,
-        strokeDashoffset: 0,
-        ease: "power4.inOut"
-      })
-      .to(hexPath, {
-        duration: 3,
-        strokeDashoffset: -pathLength,
-        ease: "power4.inOut"
-      }, ">")
-      .set(hexPath, {
-        strokeDashoffset: pathLength
-      });
-
-      const symbolsPaths = [izquierdaPath, centroPath, derechaPath];
-
-      symbolsPaths.forEach(path => {
-        if (path) {
-          const pathLength = path.getTotalLength();
-          const symbolTl = gsap.timeline({ repeat: -1 });
-
-          gsap.set(path, {
-            fill: 'none',
-            stroke: `url(#gradient-0-${suffix})`,
-            strokeWidth: 8,
-            strokeDasharray: pathLength,
-            strokeDashoffset: pathLength
-          });
-
-          symbolTl
-            .to(path, {
-              strokeDashoffset: 0,
-              duration: 3,
-              ease: "power4.inOut"
-            })
-            .to(path, {
-              strokeDashoffset: pathLength,
-              fill: 'none',
-              duration: 3,
-              ease: "power4.inOut"
-            });
-        }
-      });
+      hexTl
+        .to(hexPath, {
+          strokeDashoffset: 0,
+          duration: 3,
+          ease: "power4.inOut"
+        })
+        .to(hexPath, {
+          strokeDashoffset: pathLength,
+          duration: 3,
+          ease: "power4.inOut"
+        });
     }
+
+    const symbolsPaths = [izquierdaPath, centroPath, derechaPath];
+
+    symbolsPaths.forEach(path => {
+      if (path) {
+        const pathLength = path.getTotalLength();
+        const symbolTl = gsap.timeline({ repeat: -1 });
+
+        gsap.set(path, {
+          fill: 'none',
+          stroke: `url(#gradient-0-${suffix})`,
+          strokeWidth: 8,
+          strokeDasharray: pathLength,
+          strokeDashoffset: pathLength
+        });
+
+        symbolTl
+          .to(path, {
+            strokeDashoffset: 0,
+            duration: 3,
+            ease: "power4.inOut"
+          })
+          .to(path, {
+            strokeDashoffset: pathLength,
+            fill: 'none',
+            duration: 3,
+            ease: "power4.inOut"
+          });
+      }
+    });
   }
 
   ngAfterViewInit(): void {
