@@ -20,7 +20,7 @@ gsap.registerPlugin(MotionPathPlugin);
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent, InicioComponent, SobreMiComponent, ExperienciaComponent, ContactoComponent, CommonModule],
+  imports: [HeaderComponent, FooterComponent, InicioComponent, SobreMiComponent, ExperienciaComponent, ContactoComponent, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
