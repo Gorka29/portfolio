@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
@@ -9,8 +10,12 @@ import { CommonModule } from '@angular/common';
   templateUrl: './contacto.component.html',
   styleUrl: './contacto.component.scss'
 })
-export class ContactoComponent {
+export class ContactoComponent implements OnInit {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
   ngOnInit() {
+    if (!isPlatformBrowser(this.platformId)) return;
+
     const form = document.getElementById('fs-frm') as HTMLFormElement;
     const formResponse = document.getElementById('form-response');
 
