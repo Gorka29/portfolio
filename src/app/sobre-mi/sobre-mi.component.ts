@@ -218,7 +218,7 @@ export class SobreMiComponent implements AfterViewInit, OnDestroy {
         trigger: ".quote2",
         start: "top 80%",
         end: "bottom 90%",
-        scrub: 0.5,
+        scrub: 3,
         animation: tl,
         toggleActions: "play none none reverse"
       });
